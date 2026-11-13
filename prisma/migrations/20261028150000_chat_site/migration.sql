@@ -1,0 +1,2 @@
+-- AlterEnum
+ALTER TYPE "LeadSource" ADD VALUE IF NOT EXISTS 'CHAT_SITE';

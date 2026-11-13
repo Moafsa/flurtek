@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Identidade Flurtek: grafite e lima (mesmos tokens do protótipo) */
+:root {
+  --graphite: #222222;
+  --graphite-950: #141414;
+  --graphite-800: #2d2d2d;
+  --graphite-600: #3a3a3a;
+  --lime: #cedc00;
+  --lime-dark: #b7c500;
+  --olive: #6b7300;
+  --on-lime: #141414;
+  --paper: #f3f3ee;
+  --card: #ffffff;
+  --line: #dddcd3;
+  --ink: #161616;
+  --muted: #5e5e57;
+  --soft: #ecece4;
+  --ok: #157a45;
+  --ok-bg: #e3f4ea;
+  --warn: #a84300;
+  --warn-bg: #fdeede;
+  --bad: #b3261e;
+  --bad-bg: #fbe7e5;
+}
+
+@theme inline {
+  --color-graphite: var(--graphite);
+  --color-graphite-950: var(--graphite-950);
+  --color-graphite-800: var(--graphite-800);
+  --color-graphite-600: var(--graphite-600);
+  --color-lime: var(--lime);
+  --color-lime-dark: var(--lime-dark);
+  --color-olive: var(--olive);
+  --color-on-lime: var(--on-lime);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-soft: var(--soft);
+  --color-ok: var(--ok);
+  --color-ok-bg: var(--ok-bg);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid #8a9500;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

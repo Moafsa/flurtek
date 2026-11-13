@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem somos | Flurtek, indústria em Caxias do Sul</title>
+<meta name="description" content="Conheça a Flurtek, marca da Eco-Sul: pesquisa, testes de qualidade e processos sustentáveis em fluidos para radiadores, baterias e motores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --navy-950:#141414; --navy-900:#222222; --navy-800:#2d2d2d; --navy-700:#3a3a3a;
+  --blue:#6b7300; --cyan:#cedc00; --cyan-soft:#e0eb3d;
+  --amber:#ff7a1a; --amber-dark:#a84300;
+  --ice:#f5f5f0; --mist:#ecece4; --line:#dddcd3;
+  --ink:#161616; --muted:#5e5e57;
+  --radius:18px;
+  --maxw:1240px;
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.1;letter-spacing:-.02em}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12px/1 var(--font-display);letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.on-dark .eyebrow{color:var(--cyan-soft)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font:600 15px/1 var(--font-display);transition:.25s;border:1.5px solid transparent;cursor:pointer}
+.btn-amber{background:var(--amber);color:#fff;box-shadow:0 10px 30px -10px rgba(255,122,26,.7)}
+.btn-amber:hover{background:var(--amber-dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-dark{background:var(--navy-900);color:#fff}
+.btn-dark:hover{background:var(--navy-700)}
+.btn svg{width:16px;height:16px}
+:focus-visible{outline:3px solid #8a9500;outline-offset:3px;border-radius:6px}
+
+/* Header */
+.topbar{background:var(--navy-950);color:#b4b4b4;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.topbar a:hover{color:#fff}
+.topbar .links{display:flex;gap:24px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(34,34,34,0.82);backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.08)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;font:800 24px/1 var(--font-display);letter-spacing:-.03em}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#dbe800,#b7c500);display:grid;place-items:center}
+.logo small{display:block;font:500 10px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:#b0b0b0;margin-top:4px}
+nav.main{display:flex;gap:6px}
+nav.main a{color:#d0d0d0;font:500 15px/1 var(--font-body);padding:12px 16px;border-radius:999px;transition:.2s}
+nav.main a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .btn{padding:12px 22px;font-size:14px}
+.burger{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(1200px 700px at 78% 30%,#3b4000 0%,transparent 60%),radial-gradient(900px 600px at 10% 90%,#2a2d00 0%,transparent 60%),var(--navy-900);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:96px;padding-bottom:120px;min-height:700px}
+.hero h1{font-size:clamp(40px,5.6vw,76px);font-weight:700;margin:22px 0 26px}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#e0eb3d,#cedc00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;color:#c6c6c6;max-width:540px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero-badges{display:flex;gap:28px;margin-top:48px;color:#b0b0b0;font-size:13px;flex-wrap:wrap}
+.hero-badges span{display:flex;align-items:center;gap:8px}
+.hero-badges svg{width:18px;height:18px;color:var(--cyan)}
+.hero-visual{position:relative;height:540px}
+.orb{position:absolute;inset:8% 6%;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(206,220,0,0.27),rgba(206,220,0,0.072) 55%,transparent 70%);filter:blur(4px)}
+.ring{position:absolute;border:1px solid rgba(206,220,0,0.25);border-radius:50%;inset:2% 0}
+.ring.r2{inset:14% 12%;border-style:dashed;border-color:rgba(206,220,0,0.18)}
+.jug{position:absolute;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.jug.j1{left:2%;bottom:2%;width:30%;animation:float 7s ease-in-out infinite}
+.jug.j2{left:30%;bottom:6%;width:42%;z-index:2;animation:float 8s ease-in-out -2s infinite}
+.jug.j3{right:0;bottom:2%;width:32%;animation:float 9s ease-in-out -4s infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+.chip-float{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);border-radius:14px;padding:12px 16px;font-size:13px;color:#e6e6e6;z-index:3}
+.chip-float b{display:block;font:700 20px/1.1 var(--font-display);color:#fff}
+.chip-float.c1{top:6%;right:4%}
+.chip-float.c2{top:34%;left:-2%}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#b0b0b0;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+
+/* Stats */
+.stats{position:relative;margin-top:-64px;z-index:5}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:24px;box-shadow:0 30px 80px -30px rgba(34,34,34,0.35);border:1px solid var(--line)}
+.stat{padding:34px 32px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{display:block;font:700 40px/1 var(--font-display);color:var(--navy-900);letter-spacing:-.03em}
+.stat b span{color:var(--blue)}
+.stat p{margin-top:10px;color:var(--muted);font-size:14px}
+
+section{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(32px,4vw,52px);margin-top:16px;max-width:680px;font-weight:700}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* Products */
+.products{background:#fff}
+.prod-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
+.card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--ice);border:1px solid var(--line);transition:.35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(34,34,34,0.35)}
+.card .art{height:280px;display:grid;place-items:center;position:relative;background:linear-gradient(160deg,var(--navy-800),var(--navy-950));overflow:hidden}
+.card .art::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(206,220,0,0.21),transparent 65%);top:-60px;right:-60px}
+.card .art svg{position:relative;height:84%;width:auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.45));transition:.4s}
+.card:hover .art svg{transform:scale(1.06) rotate(-2deg)}
+.card .body{padding:30px;display:flex;flex-direction:column;flex:1}
+.tag{display:inline-block;font:600 11px/1 var(--font-display);letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:rgba(107,115,0,0.1);color:var(--blue);align-self:flex-start}
+.tag.soon{background:rgba(255,122,26,.12);color:var(--amber-dark)}
+.card h3{font-size:26px;margin:16px 0 10px;font-weight:700}
+.card p{color:var(--muted);font-size:15px;margin-bottom:22px}
+.vols{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.vols button{font:600 13px/1 var(--font-display);padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--navy-800);cursor:pointer;transition:.2s}
+.vols button:hover{border-color:var(--blue)}
+.vols button.on{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.link-arrow{margin-top:auto;display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--font-display);color:var(--navy-900)}
+.link-arrow svg{width:18px;height:18px;transition:.25s}
+.card:hover .link-arrow svg{transform:translateX(6px)}
+.card.feature .art{height:340px}
+
+/* Segments */
+.segments{background:var(--ice)}
+.seg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.seg{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:.3s;position:relative;overflow:hidden}
+.seg::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:.4s}
+.seg:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(34,34,34,0.3)}
+.seg:hover::after{width:100%}
+.ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-800),var(--navy-700));display:grid;place-items:center;color:var(--cyan-soft);margin-bottom:26px}
+.ico svg{width:26px;height:26px}
+.seg h3{font-size:19px;margin-bottom:10px}
+.seg p{font-size:14.5px;color:var(--muted)}
+
+/* Quality (dark) */
+.quality{background:var(--navy-950);color:#fff;position:relative;overflow:hidden}
+.quality::before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(206,220,0,0.132),transparent 65%);right:-300px;top:-200px}
+.quality .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.quality h2{font-size:clamp(32px,4vw,52px);margin:16px 0 22px;font-weight:700}
+.quality p.lead{color:#b8b8b8;font-size:17px;margin-bottom:36px}
+.steps{display:grid;gap:0}
+.step{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-top:1px solid rgba(255,255,255,.1)}
+.step:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.step .n{font:700 14px/1 var(--font-display);color:var(--cyan);padding-top:6px;letter-spacing:.1em}
+.step h4{font-size:20px;margin-bottom:6px}
+.step p{color:#a8a8a8;font-size:15px}
+.panel{border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);padding:40px;backdrop-filter:blur(10px)}
+.panel h4{font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-soft);margin-bottom:28px}
+.spec{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}
+.spec:last-of-type{border:0}
+.spec span{color:#a8a8a8}
+.spec b{font:600 15px/1.4 var(--font-display);text-align:right}
+.panel .btn{margin-top:26px;width:100%;justify-content:center}
+
+/* Representatives */
+.reps .box{display:grid;grid-template-columns:1fr 1fr;border-radius:32px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 40px 90px -50px rgba(34,34,34,0.4)}
+.reps .left{padding:64px}
+.reps .left h2{font-size:clamp(30px,3.6vw,46px);margin:16px 0 20px;font-weight:700}
+.reps .left p{color:var(--muted);margin-bottom:30px}
+.select-row{display:flex;gap:12px;flex-wrap:wrap}
+.select{flex:1;min-width:200px;position:relative}
+.select select{width:100%;appearance:none;-webkit-appearance:none;padding:16px 46px 16px 20px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 15px var(--font-body);color:var(--ink)}
+.select::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.map{background:linear-gradient(160deg,var(--navy-800),var(--navy-950));position:relative;display:grid;place-items:center;min-height:420px;overflow:hidden}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(206,220,0,0.35) 1.5px,transparent 1.6px);background-size:22px 22px;mask-image:radial-gradient(circle at 50% 50%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 20%,transparent 75%)}
+.pin{position:relative;text-align:center;color:#fff}
+.pin .pulse{width:18px;height:18px;border-radius:50%;background:var(--amber);margin:0 auto 18px;box-shadow:0 0 0 0 rgba(255,122,26,.7);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 30px rgba(255,122,26,0)}100%{box-shadow:0 0 0 0 rgba(255,122,26,0)}}
+.pin b{font:700 22px var(--font-display);display:block}
+.pin span{color:#b0b0b0;font-size:14px}
+
+/* Blog */
+.blog{background:var(--ice)}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.post{background:#fff;border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;transition:.3s}
+.post:hover{transform:translateY(-5px);box-shadow:0 24px 50px -30px rgba(34,34,34,0.3)}
+.post .thumb{height:190px;background:linear-gradient(135deg,var(--navy-800),var(--blue));position:relative;overflow:hidden}
+.post:nth-child(2) .thumb{background:linear-gradient(135deg,var(--navy-900),var(--cyan))}
+.post:nth-child(3) .thumb{background:linear-gradient(135deg,var(--navy-700),var(--navy-950))}
+.post .thumb::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid rgba(255,255,255,.25);right:-40px;bottom:-80px;box-shadow:0 0 0 30px rgba(255,255,255,.05),0 0 0 60px rgba(255,255,255,.04)}
+.post .txt{padding:26px}
+.post small{color:var(--blue);font:600 12px var(--font-display);letter-spacing:.12em;text-transform:uppercase}
+.post h3{font-size:20px;margin:10px 0 12px;line-height:1.25}
+.post span{color:var(--muted);font-size:14px}
+
+/* CTA */
+.cta{padding:0 0 120px;background:var(--ice)}
+.cta-box{position:relative;border-radius:36px;overflow:hidden;background:radial-gradient(800px 400px at 90% 0%,#3b4000,transparent 60%),var(--navy-900);color:#fff;padding:80px 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.cta-box h2{font-size:clamp(32px,4vw,52px);margin:16px 0 18px;font-weight:700}
+.cta-box p{color:#bdbdbd;font-size:17px}
+.form{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:32px;display:grid;gap:14px;backdrop-filter:blur(14px)}
+.form label{display:grid;gap:6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#b4b4b4}
+.form input,.form select{padding:15px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(20,20,20,0.55);color:#fff;font:15px var(--font-body)}
+.form input::placeholder{color:#8c8c8c}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{justify-content:center;margin-top:6px}
+.form small{color:#b4b4b4;font-size:12px;text-align:center}
+
+/* Footer */
+footer{background:var(--navy-950);color:#a8a8a8;padding:80px 0 30px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+footer h5{font:600 13px var(--font-display);letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+footer li{list-style:none;margin-bottom:12px;font-size:15px}
+footer a:hover{color:#fff}
+footer .logo{margin-bottom:20px}
+.f-bottom{display:flex;justify-content:space-between;padding-top:28px;font-size:13px;flex-wrap:wrap;gap:12px}
+.wa{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 34px -8px rgba(37,211,102,.6);transition:.25s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;color:#fff}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.jug,.pulse{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:1060px){
+  nav.main,.nav-cta .btn{display:none}.burger{display:block}
+  .hero .wrap{grid-template-columns:1fr;padding-top:64px;padding-bottom:140px}
+  .hero-visual{height:420px}
+  .stats .grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .prod-grid,.post-grid{grid-template-columns:1fr}
+  .seg-grid{grid-template-columns:1fr 1fr}
+  .quality .wrap,.reps .box,.cta-box{grid-template-columns:1fr}
+  .quality .wrap{gap:48px}.cta-box{padding:48px 28px}.reps .left{padding:36px 28px}
+  .f-grid{grid-template-columns:1fr 1fr}
+  section{padding:80px 0}
+}
+@media (max-width:600px){
+  .topbar .links{display:none}
+  .seg-grid{grid-template-columns:1fr}
+  .stat{padding:24px 20px}.stat b{font-size:30px}
+  .form .two{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .hero-visual{height:340px}.chip-float{display:none}
+}
+
+/* Quem somos */
+.page-hero{background:radial-gradient(1000px 520px at 85% 0%,#3b4000 0%,transparent 60%),var(--navy-900);color:#fff;padding:36px 0 0;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 75% 40%,#000,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 75% 40%,#000,transparent 70%)}
+.crumbs{position:relative;font-size:13px;color:#b0b0b0;display:flex;gap:10px;flex-wrap:wrap}
+.crumbs a:hover{color:#fff}.crumbs span{opacity:.5}
+.ph-inner{position:relative;padding:64px 0 120px;max-width:860px}
+.ph-inner h1{font-size:clamp(38px,5.4vw,72px);font-weight:700;margin:20px 0 22px}
+.ph-inner h1 em{font-style:normal;background:linear-gradient(100deg,#e0eb3d,#cedc00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ph-inner p{font-size:19px;color:#c6c6c6;max-width:640px}
+
+/* Intro */
+.intro{padding:120px 0}
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro h2{font-size:clamp(30px,3.8vw,48px);margin:16px 0 22px;font-weight:700}
+.intro p{color:var(--muted);font-size:17px;margin-bottom:18px}
+.photo{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:5/4;background:linear-gradient(150deg,var(--navy-800),var(--navy-950));display:grid;place-items:center;border:1px solid var(--line)}
+.photo::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 14px,transparent 14px 28px)}
+.photo::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(206,220,0,0.21),transparent 65%);top:-80px;right:-80px}
+.photo span{position:relative;z-index:1;color:#b4b4b4;font:600 13px var(--font-display);letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:0 24px}
+.photo .tagc{position:absolute;left:22px;bottom:22px;z-index:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);padding:12px 16px;border-radius:14px;color:#fff;font-size:13px}
+.photo .tagc b{display:block;font:700 16px var(--font-display)}
+
+/* Missão visão valores */
+.mvv{background:var(--ice);padding:120px 0}
+.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mvv-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:44px 34px;position:relative;overflow:hidden;transition:.3s}
+.mvv-card:hover{transform:translateY(-5px);box-shadow:0 28px 56px -30px rgba(34,34,34,0.35)}
+.mvv-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.mvv-card .ico{margin-bottom:28px}
+.mvv-card h3{font-size:24px;margin-bottom:14px}
+.mvv-card p{color:var(--muted);font-size:16px}
+
+/* Diferenciais */
+.diff{background:var(--navy-950);color:#fff;position:relative;overflow:hidden;padding:120px 0}
+.diff::before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(206,220,0,0.132),transparent 65%);right:-300px;top:-250px}
+.diff .wrap{position:relative}
+.diff .sec-head h2{color:#fff}.diff .sec-head p{color:#b8b8b8}
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid rgba(255,255,255,.12);border-radius:28px;overflow:hidden}
+.diff-item{padding:46px 44px;border-right:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:60px 1fr;gap:24px;transition:.3s}
+.diff-item:nth-child(2n){border-right:0}.diff-item:nth-last-child(-n+2){border-bottom:0}
+.diff-item:hover{background:rgba(255,255,255,.04)}
+.diff-item .n{font:800 38px/1 var(--font-display);color:var(--cyan);letter-spacing:-.03em}
+.diff-item h4{font-size:22px;margin-bottom:8px}
+.diff-item p{color:#a8a8a8;font-size:15.5px}
+
+/* Fatos */
+.facts{padding:100px 0 0}
+.facts .grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:24px;background:#fff}
+.fact{padding:36px 30px;border-right:1px solid var(--line)}
+.fact:last-child{border:0}
+.fact b{display:block;font:700 34px/1.1 var(--font-display);color:var(--navy-900);letter-spacing:-.03em}
+.fact b span{color:var(--blue)}
+.fact p{color:var(--muted);font-size:14px;margin-top:10px}
+.fact.tbd b{color:var(--line)}
+
+/* Fábrica / sustentabilidade */
+.green{padding:120px 0}
+.green .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.green h2{font-size:clamp(30px,3.8vw,48px);margin:16px 0 22px;font-weight:700}
+.green p{color:var(--muted);font-size:17px;margin-bottom:26px}
+.checks{display:grid;gap:14px;margin-bottom:32px}
+.checks li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:16px}
+.checks svg{flex:none;width:24px;height:24px;color:#141414;background:linear-gradient(135deg,#dbe800,#b7c500);border-radius:50%;padding:5px;margin-top:1px}
+.photo-row{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.photo-row .photo{aspect-ratio:auto;min-height:300px}
+.photo-row .col{display:grid;gap:16px}
+.photo-row .col .photo{min-height:142px}
+
+/* CTA */
+.cta{padding:0 0 120px}
+.cta-box{position:relative;border-radius:36px;overflow:hidden;background:radial-gradient(800px 400px at 90% 0%,#3b4000,transparent 60%),var(--navy-900);color:#fff;padding:80px 72px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.cta-box h2{font-size:clamp(30px,3.8vw,48px);margin:16px 0 16px;font-weight:700}
+.cta-box p{color:#bdbdbd;font-size:17px}
+.cta-box .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+
+@media (max-width:1060px){
+  .intro .wrap,.green .wrap,.cta-box{grid-template-columns:1fr}
+  .intro .wrap,.green .wrap{gap:44px}
+  .mvv-grid{grid-template-columns:1fr}
+  .diff-grid{grid-template-columns:1fr}
+  .diff-item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.1)!important;padding:32px 26px}
+  .diff-item:last-child{border-bottom:0!important}
+  .facts .grid{grid-template-columns:1fr 1fr}.fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .intro,.mvv,.diff,.green{padding:80px 0}.cta-box{padding:48px 28px}.cta-box .btns{justify-content:flex-start}
+  .ph-inner{padding:48px 0 90px}
+}
+@media (max-width:600px){
+  .topbar .links{display:none}
+  .f-grid{grid-template-columns:1fr}
+  .photo-row{grid-template-columns:1fr}
+  .diff-item{grid-template-columns:44px 1fr;gap:16px}
+}
+
+/* Menu mobile + ajustes de toque */
+.wrap>*,.box>*{min-width:0}
+.mnav{display:none;position:fixed;inset:0;z-index:90;background:var(--navy-950);color:#fff;flex-direction:column;padding:0 24px 28px;overflow-y:auto}
+.mnav.open{display:flex}
+body.nav-open{overflow:hidden}
+.mnav .mhead{display:flex;align-items:center;justify-content:space-between;height:76px;flex:none}
+.mnav .mclose{background:rgba(255,255,255,.08);border:0;color:#fff;width:46px;height:46px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.mnav nav{display:flex;flex-direction:column;margin-top:12px}
+.mnav nav a{font:600 26px/1 var(--font-display);padding:22px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;letter-spacing:-.02em}
+.mnav nav a[aria-current="page"]{color:var(--cyan-soft)}
+.mnav nav a::after{content:"\2192";font:400 20px var(--font-body);opacity:.5}
+.mnav .mcta{margin-top:auto;padding-top:28px;display:grid;gap:12px}
+.mnav .mcta .btn{justify-content:center;width:100%}
+.mnav .minfo{margin-top:22px;font-size:13px;color:#a8a8a8;text-align:center}
+nav.main a[aria-current="page"]{color:#fff;background:rgba(255,255,255,.1)}
+@media (max-width:1060px){
+  .btn,.vols button,.seg-pick button,.subjects button,.select select{min-height:44px}
+  .link-arrow{padding:12px 0}
+  footer li a,.f-bottom a,.crumbs a{display:inline-block;padding:12px 0}
+  .logo{min-height:44px}.crumbs{gap:4px 10px}
+  .soc a{min-height:44px;display:inline-flex;align-items:center}
+}
+@media (max-width:600px){
+  .map-side{padding:28px 14px}
+  .tiles{gap:4px;aspect-ratio:8/9}
+  .tile{min-height:44px}
+}
+
+/* Páginas legais + banner de cookies */
+.legal-hero{background:radial-gradient(1000px 520px at 85% 0%,#3b4000 0%,transparent 60%),var(--navy-900);color:#fff;padding:36px 0 0;position:relative;overflow:hidden}
+.legal-hero .ph-inner{padding:48px 0 80px;max-width:820px}
+.legal-hero h1{font-size:clamp(34px,4.6vw,56px);font-weight:700;margin:18px 0 14px}
+.legal-hero p{color:#c6c6c6;font-size:17px}
+.draft{display:flex;gap:14px;align-items:flex-start;max-width:900px;margin:-28px auto 0;position:relative;z-index:3;padding:18px 22px;border-radius:16px;background:#fff8f0;border:1px solid rgba(255,122,26,.45);box-shadow:0 20px 40px -28px rgba(34,34,34,0.4);font-size:14.5px;color:var(--ink)}
+.draft b{color:var(--amber-dark)}
+.legal{padding:72px 0 110px}
+.legal .grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:64px;align-items:start}
+.toc{position:sticky;top:100px;border-left:2px solid var(--line);padding-left:20px;display:grid;gap:4px}
+.toc a{font-size:14px;color:var(--muted);padding:7px 0;transition:.2s}
+.toc a:hover{color:var(--blue)}
+.prose{max-width:760px}
+.prose h2{font-size:26px;margin:48px 0 14px;scroll-margin-top:100px}
+.prose h2:first-child{margin-top:0}
+.prose p,.prose li{color:#3b3b36;font-size:16.5px;margin-bottom:14px}
+.prose ul{padding-left:22px;margin-bottom:14px}
+.prose a{color:var(--blue);text-decoration:underline}
+.prose .tbd{background:rgba(255,122,26,.14);padding:1px 6px;border-radius:6px;font-style:normal;color:var(--amber-dark);font-weight:600}
+.ctable{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:14.5px;min-width:560px}
+.ctable th,.ctable td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.ctable th{background:var(--ice);font:600 12px var(--font-display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cw{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+.cw .ctable{margin:0}
+.ck{position:fixed;left:20px;right:20px;bottom:20px;z-index:80;max-width:980px;margin:0 auto;background:var(--navy-900);color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:22px 26px;display:none;gap:22px;align-items:center;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);backdrop-filter:blur(14px)}
+.ck.show{display:flex}
+.ck p{font-size:14.5px;color:#cacaca;flex:1}
+.ck p a{color:var(--cyan-soft);text-decoration:underline}
+.ck .btns{display:flex;gap:10px;flex-wrap:wrap}
+.ck .btn{padding:12px 20px;font-size:14px;min-height:44px}
+@media (max-width:1060px){.legal .grid{grid-template-columns:minmax(0,1fr);gap:28px}.toc{position:static;display:flex;flex-wrap:wrap;gap:6px 16px;border-left:0;padding:0}.toc a{padding:8px 0}.legal{padding:48px 0 80px}}
+@media (max-width:700px){.ck{flex-direction:column;align-items:stretch;left:12px;right:12px;bottom:12px;padding:20px}.ck .btns .btn{flex:1;justify-content:center}.draft{margin:-20px 16px 0}}
+
+/* Marca: logo real, acento lima e fotos de produto */
+:root{--lime:#cedc00;--lime-dark:#b7c500;--on-lime:#141414}
+.logo-img{height:34px;width:auto;display:block}
+.logo{gap:0}
+.btn-amber{background:var(--lime);color:var(--on-lime);box-shadow:0 10px 30px -10px rgba(206,220,0,.55)}
+.btn-amber:hover{background:var(--lime-dark);color:var(--on-lime)}
+.pulse,.pin .pulse{background:var(--lime)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(206,220,0,.7)}70%{box-shadow:0 0 0 30px rgba(206,220,0,0)}100%{box-shadow:0 0 0 0 rgba(206,220,0,0)}}
+.tile.hq::after{background:var(--lime)}
+img.jug{height:auto}
+.jug.j1{width:29%;left:3%;bottom:2%}
+.jug.j2{width:41%;left:28%;bottom:4%}
+.jug.j3{width:25%;right:2%;bottom:2%}
+.card .art img{position:relative;height:86%;width:auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.45));transition:.4s}
+.card:hover .art img{transform:scale(1.05)}
+.stage img{position:relative;width:auto;max-width:80%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5));transition:height .4s}
+/* formulários no celular: campos podem encolher e nada passa da largura do cartão */
+.cta-box>*{min-width:0}
+.form input,.form select,.form textarea{min-width:0;width:100%}
+@media(max-width:560px){.cta-box{padding:36px 18px;border-radius:28px}.form{padding:22px 16px}.form .two{grid-template-columns:1fr}}
+/* fatos no celular */
+.fact{min-width:0;overflow-wrap:anywhere}
+@media(max-width:560px){.facts .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fact{padding:24px 16px}.fact b{font-size:26px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar"><div class="wrap">
+  <span>Caxias do Sul · RS — Indústria de aditivos automotivos</span>
+  <div class="links"><a href="/agua-desmineralizada#especificacoes">Fichas técnicas</a><a href="/representantes#seja">Seja um representante</a><a href="tel:+5554991268955">(54) 99126-8955</a></div>
+</div></div>
+
+<header class="site"><div class="wrap">
+  <a href="/" class="logo" aria-label="Flurtek — início">
+    <img class="logo-img" src="/site/img/logo-flurtek.png" alt="Flurtek" width="147" height="34">
+  </a>
+  <nav class="main" aria-label="Principal">
+    <a href="/#produtos">Produtos</a><a href="/#segmentos">Soluções</a><a href="/#qualidade">Qualidade</a><a href="/representantes">Representantes</a><a href="/quem-somos" aria-current="page">Quem somos</a><a href="/blog">Blog</a><a href="/contato">Contato</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="/contato#formulario" class="btn btn-amber">Solicitar cotação <svg><use href="#arrow"/></svg></a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</div></header>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mhead">
+    <a href="/" class="logo"><img class="logo-img" src="/site/img/logo-flurtek.png" alt="Flurtek" width="147" height="34"></a>
+    <button class="mclose" aria-label="Fechar menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu móvel"><a href="/#produtos">Produtos</a><a href="/#segmentos">Soluções</a><a href="/#qualidade">Qualidade</a><a href="/representantes">Representantes</a><a href="/quem-somos" aria-current="page">Quem somos</a><a href="/blog">Blog</a><a href="/contato">Contato</a></nav>
+  <div class="mcta"><a href="/contato#formulario" class="btn btn-amber">Solicitar cotação</a><a href="https://api.whatsapp.com/send?phone=555491268955" class="btn btn-ghost">WhatsApp (54) 99126-8955</a></div>
+  <p class="minfo">Caxias do Sul · RS</p>
+</div>
+
+
+<main>
+<section class="page-hero on-dark">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Você está em"><a href="/">Home</a><span>/</span><b style="color:#fff;font-weight:500">Quem somos</b></nav>
+    <div class="ph-inner">
+      <span class="eyebrow">Quem somos</span>
+      <h1>Inovação e qualidade a serviço da <em>durabilidade</em> do seu motor.</h1>
+      <p>A Flurtek é a marca da Eco-Sul, empresa de Caxias do Sul (RS) dedicada a soluções para a proteção e a manutenção de veículos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Nossa essência</span>
+      <h2>Produtos inovadores com a mais alta tecnologia.</h2>
+      <p>Somos uma empresa da Serra Gaúcha reconhecida pela qualidade e pela inovação no setor automotivo. Desenvolvemos fluidos e aditivos que protegem e melhoram o rendimento do motor.</p>
+      <p>Cada fórmula nasce de pesquisa contínua, passa por testes rigorosos de qualidade e desempenho e é produzida em processos pensados para reduzir o impacto ambiental, sem comprometer a eficácia.</p>
+      <a href="/#produtos" class="btn btn-dark" style="margin-top:12px">Conheça a linha <svg><use href="#arrow"/></svg></a>
+    </div>
+    <div class="photo rv" role="img" aria-label="Espaço reservado para foto da fábrica">
+      <span>Foto da fábrica · Caxias do Sul<br><small style="font-weight:500;letter-spacing:.04em;text-transform:none">substituir por fotografia profissional</small></span>
+      <div class="tagc"><b>Caxias do Sul · RS</b>Sede e fábrica</div>
+    </div>
+  </div>
+</section>
+
+<section class="mvv">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Missão, visão e valores</span><h2>O que nos move.</h2></div>
+      <p>Princípios que orientam o desenvolvimento de cada produto e a relação com clientes e parceiros.</p>
+    </div>
+    <div class="mvv-grid">
+      <div class="mvv-card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Missão</h3><p>Oferecer soluções inovadoras e de alta qualidade para a proteção e a manutenção de veículos, com foco em desempenho, segurança e durabilidade dos motores.</p></div>
+      <div class="mvv-card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Visão</h3><p>Ser a escolha preferida de quem busca excelência e confiabilidade, liderando o mercado com soluções que promovam a longevidade e a eficiência dos veículos, com práticas sustentáveis.</p></div>
+      <div class="mvv-card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.500 7 .8-5.200 4.800 1.500 7L12 17.500 5.700 21l1.500-7L2 9.300l7-.8z"/></svg></div><h3>Valores</h3><p>Busca constante de excelência, com práticas sustentáveis e responsáveis, para superar as expectativas do mercado automotivo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="diff on-dark">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Nossos diferenciais</span><h2>Tecnologia que você pode confiar.</h2></div>
+      <p>Do laboratório à entrega, quatro pilares sustentam a qualidade Flurtek.</p>
+    </div>
+    <div class="diff-grid rv">
+      <div class="diff-item"><div class="n">01</div><div><h4>Pesquisa e desenvolvimento</h4><p>Investimento contínuo em novas formulações e incorporação das tecnologias mais recentes.</p></div></div>
+      <div class="diff-item"><div class="n">02</div><div><h4>Testes rigorosos</h4><p>Cada fórmula é submetida a testes de qualidade e desempenho antes de chegar ao mercado.</p></div></div>
+      <div class="diff-item"><div class="n">03</div><div><h4>Proteção do motor</h4><p>Aditivos e fluidos que protegem e melhoram o rendimento de motores e sistemas de refrigeração.</p></div></div>
+      <div class="diff-item"><div class="n">04</div><div><h4>Processos sustentáveis</h4><p>Fabricação planejada para reduzir o impacto ambiental, sem comprometer a eficácia.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="wrap">
+    <div class="grid rv">
+      <div class="fact"><b>Caxias<span> do Sul</span></b><p>Sede e fábrica, na Serra Gaúcha (RS)</p></div>
+      <div class="fact"><b>2<span> linhas</span></b><p>Água desmineralizada e fluido de radiador</p></div>
+      <div class="fact"><b>1L<span> a 1.000L</span></b><p>Embalagens para consumidor, empresa e indústria</p></div>
+      <div class="fact tbd"><b>— <span>anos</span></b><p>Tempo de mercado: a confirmar com a Eco-Sul</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="green">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Compromisso</span>
+      <h2>Desempenho e responsabilidade andam juntos.</h2>
+      <p>Acreditamos que um produto de alta performance também deve respeitar o meio ambiente. Por isso, repensamos processos para reduzir impactos, mantendo a eficácia que nossos clientes esperam.</p>
+      <ul class="checks">
+        <li><svg><use href="#check"/></svg>Processos de fabricação planejados para menor impacto ambiental</li>
+        <li><svg><use href="#check"/></svg>Água desmineralizada que evita incrustações e prolonga a vida útil de equipamentos</li>
+        <li><svg><use href="#check"/></svg>Fabricante direto, com frota própria e entrega regional</li>
+      </ul>
+      <a href="/#qualidade" class="btn btn-dark">Ver qualidade e tecnologia <svg><use href="#arrow"/></svg></a>
+    </div>
+    <div class="photo-row rv" aria-hidden="true">
+      <div class="photo"><span>Foto · Produção</span></div>
+      <div class="col"><div class="photo"><span>Foto · Laboratório</span></div><div class="photo"><span>Foto · Expedição</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box on-dark rv">
+      <div>
+        <span class="eyebrow">Vamos conversar</span>
+        <h2>Conheça a Flurtek de perto.</h2>
+        <p>Fale com nossa equipe comercial ou encontre o representante da sua região.</p>
+      </div>
+      <div class="btns">
+        <a href="/contato#formulario" class="btn btn-amber">Solicitar cotação <svg><use href="#arrow"/></svg></a>
+        <a href="/representantes" class="btn btn-ghost">Representantes</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="/" class="logo"><img class="logo-img" src="/site/img/logo-flurtek.png" alt="Flurtek" width="147" height="34"></a>
+        <p style="max-width:300px;font-size:15px">Soluções inovadoras para a proteção e manutenção de veículos, com foco em desempenho, segurança e durabilidade.</p>
+      </div>
+      <div><h5>Produtos</h5><ul><li><a href="/agua-desmineralizada">Água desmineralizada</a></li><li><a href="/fluido-de-radiador">Fluido de radiador</a></li></ul></div>
+      <div><h5>Empresa</h5><ul><li><a href="/quem-somos">Quem somos</a></li><li><a href="/#qualidade">Qualidade</a></li><li><a href="/representantes">Representantes</a></li><li><a href="/blog">Blog</a></li></ul></div>
+      <div><h5>Contato</h5><ul><li>Rua João Batista Montanari, 433<br>São José · Caxias do Sul · RS</li><li><a href="tel:+5554991268955">(54) 99126-8955</a></li><li><a href="https://www.linkedin.com/company/flurtek" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/flurtek" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 Flurtek · Eco-Sul. Todos os direitos reservados.</span><span><a href="/politica-de-privacidade">Política de privacidade</a> · <a href="/politica-de-cookies">Política de cookies</a></span></div>
+  </div>
+</footer>
+<div class="ck" id="ck" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies essenciais para o site funcionar e, com o seu consentimento, cookies de análise e marketing para melhorar sua experiência. Saiba mais na <a href="/politica-de-cookies">Política de Cookies</a>.</p>
+  <div class="btns"><button class="btn btn-ghost" data-ck="essential">Só essenciais</button><button class="btn btn-amber" data-ck="all">Aceitar todos</button></div>
+</div>
+
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e,i){e.style.transitionDelay=(i%4)*70+'ms';io.observe(e)});
+})();
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('mnav');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);document.body.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o?'true':'false')}
+  b.addEventListener('click',function(){set(true)});
+  m.querySelector('.mclose').addEventListener('click',function(){set(false)});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  window.addEventListener('resize',function(){if(innerWidth>1060)set(false)});
+})();
+</script>
+<script>
+(function(){
+  var K='flurtek-consent',box=document.getElementById('ck');
+  if(!box)return;
+  var v=null;try{v=localStorage.getItem(K)}catch(e){}
+  if(!v)box.classList.add('show');
+  box.addEventListener('click',function(e){
+    var b=e.target.closest('[data-ck]');if(!b)return;
+    try{localStorage.setItem(K,b.dataset.ck)}catch(x){}
+    box.classList.remove('show');
+    window.dispatchEvent(new CustomEvent('flurtek:consent',{detail:b.dataset.ck}));
+  });
+})();
+</script>
+</body>
+</html>
